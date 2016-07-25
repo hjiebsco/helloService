@@ -12,7 +12,7 @@ public class HelloController {
 	
 	@RequestMapping("/")
 	public String hello() {
-		return "Hello from Spring Boot on Monday, Docker and ECR : " + counter.getAndIncrement();
+		return "Hello from Spring Boot: " + counter.getAndIncrement();
 	}
 
 }
