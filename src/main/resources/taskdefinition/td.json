@@ -1,0 +1,18 @@
+{  
+   "family":"hji-boot-task",
+   "containerDefinitions":[  
+      {  
+         "name":"hji-boot-container",
+         "image":"375668400289.dkr.ecr.us-east-1.amazonaws.com/hji/boot",
+         "cpu":10,
+         "memory":300,
+         "portMappings":[  
+            {  
+               "hostPort":8080,
+               "containerPort":8080,
+               "protocol":"tcp"
+            }
+         ]
+      }
+   ]
+}
