@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: helloService
+server:
+  port: 8081
+zuul:
+  routes:
+    home:
+      path: /**
+      serviceId: users
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://54.172.91.201:8761/eureka/
+
