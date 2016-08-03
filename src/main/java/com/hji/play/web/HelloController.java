@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-	
+
 	private AtomicInteger counter = new AtomicInteger(1);
-	
+
 	@RequestMapping("/")
 	public String hello() {
 		return "Hello from Spring Service 8/1. Visting count : " + counter.getAndIncrement();

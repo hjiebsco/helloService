@@ -1,15 +1,15 @@
 {  
-   "family":"hji-boot-task",
+   "family":"spike-zuul-helloService-task",
    "containerDefinitions":[  
       {  
-         "name":"hji-boot-container",
-         "image":"375668400289.dkr.ecr.us-east-1.amazonaws.com/hji/boot",
+         "name":"spike-zuul-hellService-container",
+         "image":"186926840374.dkr.ecr.us-east-1.amazonaws.com/spike/zull/helloservice",
          "cpu":10,
          "memory":300,
          "portMappings":[  
             {  
-               "hostPort":8080,
-               "containerPort":8080,
+               "hostPort":8081,
+               "containerPort":8081,
                "protocol":"tcp"
             }
          ]
