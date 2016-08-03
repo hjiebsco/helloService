@@ -2,7 +2,7 @@
    "family":"spike-zuul-helloService-task",
    "containerDefinitions":[  
       {  
-         "name":"spike-zuul-hellService-container",
+         "name":"spike-zuul-helloService-container",
          "image":"186926840374.dkr.ecr.us-east-1.amazonaws.com/spike/zull/helloservice",
          "cpu":10,
          "memory":300,
