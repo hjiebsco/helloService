@@ -12,7 +12,7 @@ public class HelloController {
 
 	@RequestMapping("/")
 	public String hello() {
-		return "Hello from Spring Service 8/1. Visting count : " + counter.getAndIncrement();
+		return "Hello from Spring Service 8/3. Visting count : " + counter.getAndIncrement();
 	}
 
 }
