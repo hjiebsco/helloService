@@ -1,8 +1,8 @@
 {  
-   "family":"spike-hello-service-task",
+   "family":"spike-hello-service",
    "containerDefinitions":[  
       {  
-         "name":"spike-hello-service-container",
+         "name":"spike-hello-service",
          "image":"186926840374.dkr.ecr.us-east-1.amazonaws.com/spike/hello/service",
          "cpu":10,
          "memory":300,
