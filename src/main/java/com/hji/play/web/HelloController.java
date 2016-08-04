@@ -5,14 +5,26 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
 @RestController
 public class HelloController {
 
-	private AtomicInteger counter = new AtomicInteger(1);
+	private AtomicInteger counter = new AtomicInteger(0);
 
 	@RequestMapping("/")
+	@HystrixCommand(fallbackMethod = "fallbackMethod")
 	public String hello() {
-		return "Hello from Spring Service 8/3. Visting count : " + counter.getAndIncrement();
+		int count = counter.incrementAndGet();
+		if (count % 3 == 0) {
+			throw new RuntimeException("Hitting a number that is multiple of three");
+		} else {
+			return "Hello from Spring Service 8/3. Visting count : " + count;
+		}
+	}
+
+	public String fallbackMethod() {
+		return "Fallback is called because counter = " + counter.get();
 	}
 
 }

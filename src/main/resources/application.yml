@@ -10,3 +10,7 @@ eureka:
     serviceUrl:
       defaultZone: http://54.172.91.201:8761/eureka/
 
+logging:
+  level:
+    root: INFO
+    com.netflix.hystrix.AbstractCommand: TRACE

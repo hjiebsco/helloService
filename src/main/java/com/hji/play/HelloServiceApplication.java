@@ -3,6 +3,7 @@ package com.hji.play;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.commons.util.InetUtils;
 import org.springframework.cloud.commons.util.InetUtilsProperties;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -13,6 +14,7 @@ import com.netflix.appinfo.AmazonInfo;
 
 @SpringBootApplication
 @EnableEurekaClient
+@EnableCircuitBreaker
 public class HelloServiceApplication {
 
 	public static void main(String[] args) {
