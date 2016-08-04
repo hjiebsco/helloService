@@ -1,9 +1,9 @@
 {  
-   "family":"spike-zuul-helloService-task",
+   "family":"spike-hello-service-task",
    "containerDefinitions":[  
       {  
-         "name":"spike-zuul-helloService-container",
-         "image":"186926840374.dkr.ecr.us-east-1.amazonaws.com/spike/zull/helloservice",
+         "name":"spike-hello-service-container",
+         "image":"186926840374.dkr.ecr.us-east-1.amazonaws.com/spike/hello/service",
          "cpu":10,
          "memory":300,
          "portMappings":[  
