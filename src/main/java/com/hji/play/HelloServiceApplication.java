@@ -24,16 +24,20 @@ public class HelloServiceApplication {
 	@Value("${server.port}")
 	private int port;
 
-//	@Bean
-//	public EurekaInstanceConfigBean eurekaInstanceConfig() {
-//		EurekaInstanceConfigBean config = new EurekaInstanceConfigBean(new InetUtils(new InetUtilsProperties()));
-//		AmazonInfo info = AmazonInfo.Builder.newBuilder().autoBuild("hello-service");
-//		config.setDataCenterInfo(info);
-//		info.getMetadata().put(AmazonInfo.MetaDataKey.publicHostname.getName(),
-//				info.get(AmazonInfo.MetaDataKey.publicIpv4));
+	@Bean
+	public EurekaInstanceConfigBean eurekaInstanceConfig() {
+		EurekaInstanceConfigBean config = new EurekaInstanceConfigBean(new InetUtils(new InetUtilsProperties()));
+		AmazonInfo info = AmazonInfo.Builder.newBuilder().autoBuild("hello-service");
+		config.setDataCenterInfo(info);
+		info.getMetadata().put(AmazonInfo.MetaDataKey.publicHostname.getName(),
+				info.get(AmazonInfo.MetaDataKey.publicIpv4));
+		info.getMetadata().put(AmazonInfo.MetaDataKey.localHostname.getName(),
+				info.get(AmazonInfo.MetaDataKey.localIpv4));
 //		config.setHostname(info.get(AmazonInfo.MetaDataKey.publicHostname));
 //		config.setIpAddress(info.get(AmazonInfo.MetaDataKey.publicIpv4));
-//		config.setNonSecurePort(port);
-//		return config;
-//	}
+		config.setHostname(info.get(AmazonInfo.MetaDataKey.localHostname));
+		config.setIpAddress(info.get(AmazonInfo.MetaDataKey.localIpv4));
+		config.setNonSecurePort(port);
+		return config;
+	}
 }
