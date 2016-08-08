@@ -5,7 +5,7 @@
          "name":"spike-hello-service",
          "image":"186926840374.dkr.ecr.us-east-1.amazonaws.com/spike/hello/service",
          "cpu":10,
-         "memory":300,
+         "memory":500,
          "portMappings":[  
             {  
                "hostPort":8081,
