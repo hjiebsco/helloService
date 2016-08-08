@@ -19,7 +19,7 @@ public class HelloController {
 		if (count % 3 == 0) {
 			throw new RuntimeException("Hitting a number that is multiple of three");
 		} else {
-			return "Hello from Spring Service 8/3. Visting count : " + count;
+			return "Hello from Spring Service 8/5 for DEMO. Visting count : " + count;
 		}
 	}
 
