@@ -27,7 +27,7 @@ public class HelloServiceApplication {
 	@Bean
 	public EurekaInstanceConfigBean eurekaInstanceConfig() {
 		EurekaInstanceConfigBean config = new EurekaInstanceConfigBean(new InetUtils(new InetUtilsProperties()));
-		AmazonInfo info = AmazonInfo.Builder.newBuilder().autoBuild("eureka");
+		AmazonInfo info = AmazonInfo.Builder.newBuilder().autoBuild("hello-service");
 		config.setDataCenterInfo(info);
 		info.getMetadata().put(AmazonInfo.MetaDataKey.publicHostname.getName(),
 				info.get(AmazonInfo.MetaDataKey.publicIpv4));
