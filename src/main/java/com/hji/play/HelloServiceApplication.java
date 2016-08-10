@@ -5,7 +5,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.commons.util.InetUtils;
-import org.springframework.cloud.commons.util.InetUtilsProperties;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean;
 import org.springframework.context.annotation.Bean;
@@ -28,8 +27,8 @@ public class HelloServiceApplication {
 	private boolean addressLocal;
 
 	@Bean
-	public EurekaInstanceConfigBean eurekaInstanceConfig() {
-		EurekaInstanceConfigBean config = new EurekaInstanceConfigBean(new InetUtils(new InetUtilsProperties()));
+	public EurekaInstanceConfigBean eurekaInstanceConfig(InetUtils inetUtils) {
+		EurekaInstanceConfigBean config = new EurekaInstanceConfigBean(inetUtils);
 		AmazonInfo info = AmazonInfo.Builder.newBuilder().autoBuild("hello-service");
 		config.setDataCenterInfo(info);
 
