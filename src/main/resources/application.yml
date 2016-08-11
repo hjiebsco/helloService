@@ -19,7 +19,7 @@ eureka:
     initialInstanceInfoReplicationIntervalSeconds: 2
     eurekaServiceUrlPollIntervalSeconds: 2000
   instance:
-    instanceEnabledOnit: true
+    instanceEnabledOnit: false
     leaseRenewalIntervalInSeconds: 2
     leaseExpirationDurationInSeconds: 10  
       
