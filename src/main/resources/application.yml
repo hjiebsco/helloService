@@ -21,7 +21,7 @@ eureka:
   instance:
     instanceEnabledOnit: true
     leaseRenewalIntervalInSeconds: 2
-    leaseExpirationDurationInSeconds: 5  
+    leaseExpirationDurationInSeconds: 10  
       
 logging:
   level:
