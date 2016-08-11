@@ -14,14 +14,14 @@ eureka:
       #defaultZone: http://52.86.121.106:8761/eureka/
       defaultZone: http://ec2-52-86-121-106.compute-1.amazonaws.com:8761/eureka/
       #defaultZone: http://ec2-52-207-143-205.compute-1.amazonaws.com:8761/eureka/
-    registryFetchIntervalSeconds: 2
-    instanceInfoReplicationIntervalSeconds: 2
-    initialInstanceInfoReplicationIntervalSeconds: 2
-    eurekaServiceUrlPollIntervalSeconds: 2000
+    registryFetchIntervalSeconds: 1
+    instanceInfoReplicationIntervalSeconds: 1
+    initialInstanceInfoReplicationIntervalSeconds: 1
+    eurekaServiceUrlPollIntervalSeconds: 1000
   instance:
-    eurekaServiceUrlPollIntervalSeconds: true
-    leaseRenewalIntervalInSeconds: 2
-    leaseExpirationDurationInSeconds: 5  
+    instanceEnabledOnit: true
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2  
       
 logging:
   level:
