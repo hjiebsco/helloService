@@ -2,6 +2,7 @@ package com.hji.play.web;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,6 +14,7 @@ public class HelloController {
 	private AtomicInteger counter = new AtomicInteger(0);
 
 	@RequestMapping("/")
+	@CrossOrigin(origins = "*")
 	@HystrixCommand(fallbackMethod = "fallbackMethod")
 	public String hello() {
 		int count = counter.incrementAndGet();
