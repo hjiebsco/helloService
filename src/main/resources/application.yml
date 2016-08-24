@@ -3,7 +3,7 @@ spring:
     name: helloService
     
 server:
-  port: 8081
+  port: 8091
   
 address:
   local: true
