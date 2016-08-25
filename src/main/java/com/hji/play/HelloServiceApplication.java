@@ -29,7 +29,7 @@ public class HelloServiceApplication {
 	@Bean
 	public EurekaInstanceConfigBean eurekaInstanceConfig(InetUtils inetUtils) {
 		EurekaInstanceConfigBean config = new EurekaInstanceConfigBean(inetUtils);
-		AmazonInfo info = AmazonInfo.Builder.newBuilder().autoBuild("hello-service");
+		AmazonInfo info = AmazonInfo.Builder.newBuilder().autoBuild("helloService");
 		config.setDataCenterInfo(info);
 
 		if (addressLocal) {
