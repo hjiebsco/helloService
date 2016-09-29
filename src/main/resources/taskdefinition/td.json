@@ -3,7 +3,7 @@
    "containerDefinitions":[  
       {  
          "name":"spike-hello-service",
-         "image":"186926840374.dkr.ecr.us-east-1.amazonaws.com/spike/hello/service",
+         "image":"186926840374.dkr.ecr.us-east-1.amazonaws.com/spike/hello/service:{TAG_NUM}",
          "cpu":10,
          "memory":1000,
          "portMappings":[  
