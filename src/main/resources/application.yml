@@ -10,21 +10,31 @@ management:
   
 address:
   local: true
-  
+
+#old  
+#eureka:
+#  client:
+#    serviceUrl:
+#      #defaultZone: http://52.86.121.106:8761/eureka/
+#      defaultZone: http://ec2-52-86-121-106.compute-1.amazonaws.com:8761/eureka/
+#      #defaultZone: http://ec2-52-207-143-205.compute-1.amazonaws.com:8761/eureka/
+#    registryFetchIntervalSeconds: 2
+#    instanceInfoReplicationIntervalSeconds: 2
+#    initialInstanceInfoReplicationIntervalSeconds: 2
+#    eurekaServiceUrlPollIntervalSeconds: 2000
+#  instance:
+#    instanceEnabledOnit: false
+#    leaseRenewalIntervalInSeconds: 2
+#    leaseExpirationDurationInSeconds: 10  
+
+#new
 eureka:
   client:
-    serviceUrl:
-      #defaultZone: http://52.86.121.106:8761/eureka/
-      defaultZone: http://ec2-52-86-121-106.compute-1.amazonaws.com:8761/eureka/
-      #defaultZone: http://ec2-52-207-143-205.compute-1.amazonaws.com:8761/eureka/
-    registryFetchIntervalSeconds: 2
-    instanceInfoReplicationIntervalSeconds: 2
-    initialInstanceInfoReplicationIntervalSeconds: 2
-    eurekaServiceUrlPollIntervalSeconds: 2000
-  instance:
-    instanceEnabledOnit: false
-    leaseRenewalIntervalInSeconds: 2
-    leaseExpirationDurationInSeconds: 10  
+    useDnsForFetchingServiceUrls: true
+    region: us-east-1
+    eurekaServerDNSName: spike-eureka.static-ebscohost.com
+    eurekaServerPort: 8761
+    eurekaServerURLContext: eureka
       
 logging:
   level:
